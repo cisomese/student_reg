@@ -41,10 +41,10 @@ public class studentController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteStudent(@PathVariable Long id) {
         try {
-            studentService.studentDelete(id); // Assuming this method is void
-            return ResponseEntity.noContent().build(); // Return 204 No Content on success
+            studentService.studentDelete(id); 
+            return ResponseEntity.noContent().build(); 
         } catch (Exception e) {
-            return ResponseEntity.internalServerError().build(); // Return 500 Internal Server Error on failure
+            return ResponseEntity.internalServerError().build(); 
         }
     }
 }
